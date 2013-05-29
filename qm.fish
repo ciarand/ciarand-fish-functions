@@ -5,13 +5,19 @@ function qm --description Changes\ working\ directory\ to\ one\ of\ the\ \'short
         read target;
         set target ~/shortcuts/$target;
     else;
-        set -l target ~/shortcuts/$argv;
+        set target ~/shortcuts/$argv;
     end;
-    echo $target;
+
+    set target (echo $target | sed '$s/@$//');
+
     if test -e $target;
+        echo "Switching to $target";
+        cd $target;
+    else if test -e (echo $target | sed '$s/.$//');
         echo "Switching to $target";
         cd $target;
     else;
         echo "No such shortcut";
     end;
+    set -e target;
 end;

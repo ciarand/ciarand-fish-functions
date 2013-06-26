@@ -7,7 +7,7 @@ function fish_right_prompt --description 'Print the left part of the prompt'
         git rev-parse ^ /dev/null; and begin;
             set -l current_branch (git rev-parse --abbrev-ref HEAD ^ /dev/null);
             set -l branch_status (begin;
-                set_color (git diff-index --quiet HEAD ^ /dev/null; and echo blue; or echo red;);
+                set_color (git diff --quiet --ignore-submodules HEAD ^ /dev/null; and echo blue; or echo red;);
                 echo "●";
                 set_color normal;
             end;);

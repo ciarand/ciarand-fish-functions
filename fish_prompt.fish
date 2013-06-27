@@ -7,7 +7,7 @@ function fish_prompt --description 'Write out the prompt'
         end;
     end;
     begin;
-        echo "⚡";
+        echo "❯";
     end;
     begin;
         set_color normal;

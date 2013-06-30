@@ -1,5 +1,5 @@
-@ciarand's Fish Functions
-=========================
+@ciarand's Fish Functions (v1.1)
+================================
 
 These functions represent a backup of the [Fish shell](http://fishshell.com/) functions I use on a regular basis.
 

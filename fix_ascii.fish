@@ -1,11 +1,12 @@
 function fix_ascii --description 'Fix any problems with Ascii encoding and convert line endings to Unix (lf)'
     for target in $argv;
-        echo "Packing $target into foo.zip";
-        zip -qr0 foo.zip $target; and begin;
-            echo "Unpacking foo.zip into $target";
-            unzip -aqo foo.zip; and begin;
-                echo "Cleaning foo.zip";
-                rm foo.zip;
+        echo "Packing $target into $tmpfile";
+        set -l tmpfile (mktemp tmp_archive.zipXXXXXXXXXX).zip;
+        zip -ll -qr0 $tmpfile $target; and begin;
+            echo "Unpacking "$tmpfile" into $target";
+            unzip -aqo $tmpfile; and begin;
+                echo "Cleaning "$tmpfile;
+                rm $tmpfile;
             end;
         end;
     end;

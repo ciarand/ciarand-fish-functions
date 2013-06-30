@@ -1,4 +1,4 @@
-function fix_ascii --description 'Fix any problems with Ascii encoding and convert line endings to Unix (lf)'
+function switch_to_lf --description 'Fix any problems with line endings by converting the passed files / folders to LF (Unix) line endings'
     for target in $argv;
         echo "Packing $target into $tmpfile";
         set -l tmpfile (mktemp tmp_archive.zipXXXXXXXXXX).zip;

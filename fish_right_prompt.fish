@@ -18,12 +18,12 @@ function fish_right_prompt --description 'Print the right part of the prompt'
     set -l is_git_repo (git rev-parse --is-inside-work-tree ^ /dev/null > /dev/null; echo $status)
 
     if test $is_git_repo = $true
-        set -l is_dirty (not git diff --quiet --ignore-submodules HEAD ^ /dev/null; echo $status)
+        set -l is_dirty (not git diff --quiet --ignore-submodules HEAD ^ /dev/null > /dev/null; echo $status)
 
         set -l git_status_color (test $is_dirty = $true; and set_color $dirty_color; or set_color $clean_color);
         set -l git_normal_color (set_color normal);
 
-        set -l git_prompt (begin
+        set git_prompt (begin
             # variable declarations
             set -l git_meta_branch
             set -l git_meta_tag
@@ -32,7 +32,7 @@ function fish_right_prompt --description 'Print the right part of the prompt'
             # branch
             set -l branch (git rev-parse --abbrev-ref HEAD ^ /dev/null)
             # tag
-            set -l current_tag (git describe --always --tag)
+            set -l current_tag (git describe --always --tag ^ /dev/null)
 
             # character output
             set git_character (begin

@@ -1,18 +1,17 @@
-@ciarand's Fish Functions (v1.1)
+@ciarand's Fish Functions (v1.2)
 ================================
 
-These functions represent a backup of the [Fish shell](http://fishshell.com/) functions I use on a regular basis.
+These functions represent a backup of the [Fish shell](http://fishshell.com/)
+functions I use on a regular basis.
 
+They have been shamelessly stolen from around the internet.
 
-Stars
------
+My favorites right now are:
 
-### `g`
+* Jump (`jump.fish`, `mark.fish`, `marks.fish`, `unmark.fish`)
 
-An alias for git. When called without any arguments, `g` executes a `git
-status`. When called with arguments it passes them to git.
+  >Source: http://goo.gl/Oc5tMT
 
-### `switch_to_lf`
+* e (`e.fish`)
 
-Fixes any issues with LF line endings by zipping the files / folders up
-and then unzipping them with the appropriate flags passed.
+  >Source: https://github.com/holman/dotfiles

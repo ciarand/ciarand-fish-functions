@@ -1,3 +1,3 @@
 function ls --description 'List contents of directory'
-	command ls -lAFG $argv
+	command ls -ltsrAFG $argv
 end

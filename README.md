@@ -1,4 +1,4 @@
-@ciarand's Fish Functions (v1.2)
+@ciarand's Fish Functions (v1.3)
 ================================
 
 These functions represent a backup of the [Fish shell](http://fishshell.com/)

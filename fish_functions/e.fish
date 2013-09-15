@@ -18,6 +18,6 @@ function e -d "Open a file using $EDITOR"
     if test -z $argv
       eval $EDITOR .
     else
-      eval $EDITOR $argv
+      eval $EDITOR "$argv"
     end
 end

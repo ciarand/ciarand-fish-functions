@@ -1,4 +1,4 @@
-@ciarand's Fish Functions (v1.3)
+@ciarand's Fish Functions (v2.0)
 ================================
 
 These functions represent a backup of the [Fish shell](http://fishshell.com/)
@@ -6,12 +6,7 @@ functions I use on a regular basis.
 
 They have been shamelessly stolen from around the internet.
 
-My favorites right now are:
+These are now *deprecated* and will not be developed. If, on the off chance
+you're feeling curious, you can find the updated versions [here][].
 
-* Jump (`jump.fish`, `mark.fish`, `marks.fish`, `unmark.fish`)
-
-  >Source: http://goo.gl/Oc5tMT
-
-* e (`e.fish`)
-
-  >Source: https://github.com/holman/dotfiles
+[here]: https://github.com/ciarand/dotfiles

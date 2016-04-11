@@ -1,3 +1,5 @@
+This project is deprecated and unmaintained. Proceed with caution!
+
 @ciarand's Fish Functions (v2.0)
 ================================
 
